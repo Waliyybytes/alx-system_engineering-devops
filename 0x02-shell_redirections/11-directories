@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -la | du | wc -l
+ls -la /. | du | wc -l
