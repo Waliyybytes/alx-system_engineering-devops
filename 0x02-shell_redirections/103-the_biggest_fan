@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -d '\t' -f 1 |uniq --count|rev|cut -d " " -f 1,2|rev|sort -nr| head -11|cut -d " " -f 2
+cut -f 1 |uniq --count|rev|cut -d " " -f 1,2|rev|sort -nr| head -11|cut -d " " -f 2
