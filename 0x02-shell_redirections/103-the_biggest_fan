@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -d '\t' -f 1 | sort -k 1 |uniq --count|rev|cut -d " " -f 1,2|rev|sort -n|tail -11
+cut -d '\t' -f 1 | sort -k 1 |uniq --count|rev|cut -d " " -f 1,2|rev|sort -nr|tail -11
