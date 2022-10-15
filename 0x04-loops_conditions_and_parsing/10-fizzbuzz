@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# to implement the FizzBuzz script
+
+for i in {1..100}
+do
+	(( var1 = i % 3 ))
+	(( var2 = i % 5 ))
+	(( var3 = i % 15 ))
+	if [ $var1 -eq 0 ] && [ $var2 -ne 0 ]
+	then
+		echo "Fizz"
+		continue
+	elif [ $var2 -eq 0 ] && [ $var1 -ne 0 ]
+	then 
+		echo "Buzz"
+		continue
+	elif [ $var3 = 0 ]
+	then
+		echo "FizzBuzz"
+		continue
+	else
+		echo "$i"	
+	fi
+done
