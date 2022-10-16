@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # To dig Apache logs
 
-awk -F" " '{print $1, $9}' apache-access.log | awk -F' ' '{a[$0]++}END{for(i in a) {print "    " a[i], i}}' | sort -nrk1
+awk -F" " '{print $1, $9}' apache-access.log | awk -F' ' '{a[$0]++}END{for(i in a) {printf "\t%s %s\n", a[i], i}}' | sort -nrk1
