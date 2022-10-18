@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# To display a list of current processes in a format friendly way
+
+ps axuf
