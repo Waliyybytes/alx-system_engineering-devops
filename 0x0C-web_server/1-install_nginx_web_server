@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # install nginx server and change landing content
-apt-get update -y
-apt-get upgrade -y
-apt-get install nginx -y
-chown -R "$USER":"$USER" /var/www/html
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
-service nginx restart
+sudo pt-get update -y
+sudo apt-get upgrade -y
+sudo  apt-get install nginx -y
+echo "Hello World!" > /usr/share/nginx/html/index.html
+sudo service nginx restart
