@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
-# set /redirect_me to return 301
+# Install and Configure Nginx to serve Hello World on homepage and 
+# redirct to youtube when redirect_me is access
 apt-get update -y
 apt-get upgrade -y
 apt-get install nginx -y
-echo "Hello World!" > /usr/share/nginx/html/index.html
-num="$(grep -c -P '^\tlocation \/redirect_me' < /etc/nginx/sites-available/default)"
-if [ "$num" -eq 0 ]
-then
-	sed -i '/^\tserver_name/ a\\n\tlocation \/redirect_me \{\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t\}\n' /etc/nginx/sites-available/default
-fi
+chown -R "$USER":"$USER" /var/www/html
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+line="\\\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
+sed -i "26i $line" /etc/nginx/sites-available/default
 service nginx restart
