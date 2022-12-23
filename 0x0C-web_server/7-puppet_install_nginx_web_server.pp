@@ -1,4 +1,4 @@
-# perform a 301 redirect when querying /redirect_me.
+# Install Nginx web server (w/ Puppet)
 
 exec {'update host':
 command => '/usr/bin/apt update -y'
