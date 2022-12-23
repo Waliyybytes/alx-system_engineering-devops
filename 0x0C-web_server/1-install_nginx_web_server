@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # install nginx server and change landing content
-sudo pt-get update -y
-sudo apt-get upgrade -y
-sudo  apt-get install nginx -y
+apt-get update -y
+apt-get upgrade -y
+apt-get install nginx -y
 echo "Hello World!" > /usr/share/nginx/html/index.html
-sudo service nginx restart
+service nginx restart
