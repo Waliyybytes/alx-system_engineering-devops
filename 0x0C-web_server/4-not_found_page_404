@@ -2,7 +2,7 @@
 # set custom 404 page
 apt-get update -y
 apt-get install nginx -y
-echo "Holberton School" > /usr/share/nginx/html/index.html
+echo "Hello World!" > /usr/share/nginx/html/index.html
 /etc/init.d/nginx start
 num="$(grep -c -P '^\tlocation \/redirect_me' < /etc/nginx/sites-available/default)"
 if [ "$num" -eq 0 ]
